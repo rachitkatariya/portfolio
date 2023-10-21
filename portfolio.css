@@ -1,0 +1,815 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+    body{
+        margin: 0em;
+        overflow-y: scroll;
+        font-family: 'Lato', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        overflow-x: hidden;
+        word-wrap: break-word;
+        text-align: left;
+        padding: 0em;
+        width: 100%;
+        background-color: #ffffff; 
+        color: #000;
+    
+    }
+
+    :root{
+    --blue:#3fb1ef;
+    --darkmodeblue:#1d3d4f;
+    --grey:#292929;
+    --darkgrey:#131417;
+    --offblack: #121212;
+    --purple:#c994ff;
+    --cream: #FFFBEB;
+    --orange: #FF7F4A;
+
+    }
+
+    nav a{
+        text-decoration: none;
+        color: white;
+        padding: 0.8em;
+    }
+    nav a:active{
+        text-decoration: none;
+        color: #000;
+        
+    }
+    nav a:hover{
+        border-bottom: 3px solid white;
+        transition: all 0.1s ease-in-out;
+    }
+
+
+
+    li{
+        list-style: none;
+    }
+    ul{
+        margin:0em;
+        padding: 0em;
+    }
+    h1{
+        font-size: 4em;
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+        color: var(--black);
+        border-bottom: 5px solid black;
+        width: fit-content;
+    }
+
+    header{
+        height:100vh;
+        
+    }
+    header h1{
+        color: #000;
+        border: none;
+        width: auto;
+    }
+    div li{
+        font-size: 1.5em;
+    }
+
+
+
+    #navbar{
+    background-color: rgb(201,148,255) !important;
+    width: 100%;
+    height: auto;
+    margin: 0em 0em;
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+    background:none;
+    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.379); 
+
+    visibility: visible;
+
+
+    }
+
+    nav li{
+        margin: 0em;
+        float: left;
+        list-style: none;
+        padding: 2% 0em 2% 2.5%;
+        text-align: center;
+    }
+
+
+    div{
+        padding: 1em 4em 3em 4em;
+    }
+
+    #hamburger,#close-icon{
+        display: none;
+    }
+    #hamburger-button{
+        display: none;
+    }
+
+    .right-nav-elements{
+        display: block;
+    }
+    .right-nav-elements li{
+        display: grid;
+        grid-auto-flow: column;
+        padding:6% 0em 0% 3.5%;
+        visibility: visible ;
+        margin-right: 2em;
+    }
+    .Resume-button{
+        background: none;
+        color: white;
+        border-radius: 2em;
+        padding: 3% 2em 3% 2em;
+        font-family: 'Lato', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 1em;
+        border: none;}
+
+        /* dark-mode */
+        .dark-mode{
+            display: block;
+            color: white;
+            padding: 6%;
+            padding-left: 1em;
+            height: 1em;
+            background: none;
+            border-radius: 10em;
+            background-color: rgba(255, 255, 255, 0.315);
+            transition: all 0.5s ease-in-out;
+            
+            
+        }
+
+        /*   /* light-mode */
+        .light-mode{
+            display: none;
+            color: white;
+            padding: 6%;
+            padding-right: 1em;
+            height: 1em;
+            background: none;
+            border-radius: 10em;   
+            background-color: rgba(255, 255, 255, 0.315);
+            transition: all 1s ease-in-out;
+        }
+
+
+    /* header */
+    h1{
+        margin: 0em;
+    }
+
+    .header-content{
+        text-align: center;
+        padding-top: 1%;
+        padding-bottom: 20%;
+        padding-left: 2em;
+        padding-right: 2em;
+
+    }
+    .header-content p{
+        font-size: 2em;
+    }
+    
+    .code-icon{
+        font-size: 50px !important;
+        color: black;
+    }
+
+    header img{
+        width: 20%;
+        height: auto;
+        border-radius: 4em;
+        position: absolute; 
+        top: 90%; 
+        left: 50%; 
+        transform: translate(-50%, -50%);
+    }
+    #changing-container{
+        color: var(--purple);
+        text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.228);
+    }
+
+    .lets-talk-btn{
+        margin-bottom: 1em; 
+        padding-left: 2%;
+        padding-right: 2%;
+        cursor: pointer;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        border-radius: 1em;
+        color: white;
+        border: none;
+        font-family: Montserrat,sans-serif;
+        background: var(--purple);
+        transition:  0.5s;
+        transform: translate(0%,0%);
+        transition: transform 0.5s;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);  
+    }
+
+    .lets-talk-btn.active {
+        position: fixed;
+        bottom: 10%;
+        right: 2%;
+        transform: translate(50%, 50%);
+        position: fixed;
+        margin-bottom: 1em;
+        cursor: pointer;
+        border-radius: 1em;
+        border: none;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.852); 
+        background-color: var(--purple);
+    }
+
+    .lets-talk-btn:hover {
+        transform: translateY(-10%);
+        box-shadow: 0 5px 10px rgba(201, 148, 255, 0.591);   
+        transition: all 0.2s;
+        }
+
+
+
+    /* about me */
+
+
+    .about-me{
+        padding-top: 6em;
+        border: 2px solid black;
+        margin: 5em 5em;
+        border-radius: 2em;
+        box-shadow: 7px 7px 2px black;
+        background-color: #ffa27b;
+    }
+
+
+
+    div div{
+        padding: 0px;
+    } 
+
+
+    .about-me-content{
+        font-size: 1.3em;
+        align-items: center;
+    }
+    .wave-img{
+        padding: 0;
+        margin: 0em;
+        margin-top: 4em;
+    }
+    img{
+        vertical-align: top;
+    }
+
+
+    .skills{
+        margin: 0em;
+        background-color: var(--purple);
+        position: relative;
+        height: 100vh;
+    }
+    .skills h1{
+        color:white;
+        border-bottom:5px solid white;
+    }
+
+
+    .skills-list{
+        display: grid;
+        font-size: 150%;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 100% 100%;
+        margin-top: 4em;
+        margin-bottom: 3em;
+        justify-content: center;
+        color: white;
+    }
+
+
+    .skills-item-1{
+        border-bottom: 1px solid white;
+        border-right: 1px solid white;
+        text-align: center;
+    }
+
+    .skills-item-4{
+        border-right: 1px solid white;
+        text-align: center;
+    }
+    .skills-item-2 {
+        border-bottom: 1px solid white;
+        border-right: 1px solid white;
+        text-align: center;
+    }
+    .skills-item-5{
+        border-right: 1px solid white;
+        text-align: center;
+    }
+    .skills-item-3{
+        border-bottom: 1px solid white;
+        text-align: center;
+    }
+    .skills-item-6{
+        text-align: center;
+    }
+
+    hr{
+        height: 0.2em;
+        background-color: black;
+        border: none;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    /* Education */
+    .education{
+        background-color: #f9fbfe;
+        padding-top: 7%;
+        padding-bottom: 7%;
+        /* color:#2b546a; */
+    }
+    li li{
+        font-size: 1.2em;
+    }
+
+    div li{
+        padding-top: 1em;
+    }
+
+    img{
+        height: 100%;
+        width: 100%;
+        align-self: center; 
+    }
+
+    .education-boxes{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 4em; 
+    }
+    #MCA, #CS-Hons{
+        background-color: white;
+        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.279);
+        text-align: left;
+        border-radius: 1em;
+        padding: 2em 2em;  
+        color:black;
+    }
+    #MCA:hover, #CS-Hons:hover{
+        box-shadow: 2px 5px 10px 2px rgba(0, 0, 0, 0.279);
+        transition: 0.5s;
+    }
+
+    .list-of-courses li{
+        padding: 0em;
+        margin: 0em;
+        list-style:circle;
+        list-style-position:inside;
+        font-size: 0.8em;
+    }
+
+    /* work-experience */
+    #title{
+        font-size: 1.5em;
+    }
+
+    .subname{
+        font-size: 1em;
+        padding-top: 0.3em;
+        color: rgb(58, 54, 54);  
+    }
+    .sub-subname{
+        font-size: 0.9em;
+        padding-top: 0.3em;
+        color: rgb(58, 54, 54);  
+    }
+
+    .work-experience-content{
+        display: flex;
+        flex-direction: column;
+        border-left: 2px solid black;
+        padding-left: 2em;
+        row-gap: 3em;
+    }
+    .work-experience-content p{
+        margin: 0em;
+        padding: 0em;
+    }
+
+    .work-experience-content img{
+        height:80%;
+    }
+
+    .work-experience{
+        background-color: #FFE711;
+    
+    }
+
+    .view-more{
+        border: 1.5px solid black;
+        border-radius: 0.5em;
+        box-shadow: 3px 3px 2px black;
+        padding: 1%;
+        background-size: 200% 100%;
+        background-image: linear-gradient(to right, white 50%, var(--purple) 50%);
+        transition: background-position 0.5s;
+    }
+
+    .arrow{
+        font-size: 1em;
+    }
+    .view-more:hover{
+        border: 1.5px solid black;
+        transform: translateY(-10%);
+        box-shadow: 3px 6px 2px black;
+        padding: 1%;
+        background-color: var(--purple);
+        color: white;
+        background-position: -100% 100%;
+    }
+    .arrow{
+        font-size: 1em;
+    }
+
+
+    /* Projects */
+    .project-contents iframe{
+        margin-top: 3em;
+        width: 100%;
+        height:80vh;
+    }
+    .project-contents img{
+        width:100%;
+
+    }
+    .project-contents{
+        display: grid;
+        grid-template-columns: 50% 50%;    
+    }
+    .projects{
+        background-color: white;
+    }
+    .project-description{
+        padding-top: 2em;
+    }
+        
+    footer {
+        padding:3%;
+        height:4%;
+        background-color:var(--purple);
+        }
+    footer li{
+        color: white !important;
+    }
+    footer a{
+        color: white;
+        font-size: small;
+    }
+
+    .footer-logos{
+        padding-left:45%;
+        display: grid;
+        grid-template-columns: 10% 10%;
+    }
+    .circle{        
+        border: 1px solid white;
+        border-radius: 2em;
+        background-color: white;
+        color: rgb(0, 136, 255);
+        padding: 1em;
+        text-align: center;
+        margin-left: 10%;
+        transition: background-color 0.2s ease-in-out;
+    }
+    .circle:hover{        
+        border:none;
+        color: black;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.454);
+    }
+    .fa-linkedin:hover{
+        background-color:  #FFE711;
+    }
+    .fa-twitter:hover{
+        background-color:  #ff611d;
+        color:white;
+    }
+
+
+    /* bacause some nav bar elements ar two worded and padding becomes weird below this */
+    @media screen and (max-width: 910px) {
+            nav li{
+                margin: 0em;
+                float: left;
+                list-style: none;
+                width:auto;
+                padding: 2% 0em 2% 2.5%;
+                text-align: center;
+                /* the only change is font size */
+                font-size: 0.90em;  
+            }
+
+            nav{
+                width: 100%;
+            }
+        
+        
+            h1{
+                font-size: 3em;
+                margin-top: 0.2em;
+                margin-bottom: 0.2em;
+            }
+            div li{
+                font-size: 1.5em;
+            }
+        
+
+        .footer-logos{
+            display: block;
+            padding-left: 25%;
+        }
+    }
+
+
+
+    /* for phone screens */
+    @media screen and (max-width: 635px) {
+        body{
+            width:100%;
+            overflow-x: hidden;
+        }
+        
+        #navbar{
+            display: flex;
+            height: 100vh; 
+            width: 0;
+            position: fixed;
+            background-color: rgba(255, 255, 255, 0.973) !important;
+            transition: all 0.5s ease-in-out;
+            z-index: 2;
+        }
+        .left-nav-elements{
+            visibility: hidden;
+        }
+    
+
+        nav a{
+            color: var(--purple);
+        }
+
+        nav ul{
+            padding-top: 50%;
+            padding-left: 38%;  
+        }
+        nav li {
+        float: none;
+        display: block;
+        width: 100%;
+        padding-top: 2em;
+        text-align: left; 
+        }
+
+        .dark-mode{
+            display: block;
+            color: black;
+            padding: 6%;
+            padding-left: 1em;
+            height: 1em;
+            background: none;
+            border-radius: 10em;
+            background-color: rgba(0, 0, 0, 0.08);
+            transition: all 0.5s ease-in-out;
+            
+            
+        }
+
+        /*   /* light-mode */
+        .light-mode{
+            display: none;
+            color: white;
+            padding: 6%;
+            padding-right: 1em;
+            height: 1em;
+            background: none;
+            border-radius: 10em;   
+            background-color: rgba(255, 255, 255, 0.189);
+            transition: all 1s ease-in-out;
+        }
+    
+        h1{
+            font-size: 3em;
+            margin-top: 0.1em;
+            margin-bottom: 0.1em;
+        }
+
+        div li{
+            font-size: 1em;
+        
+        }
+
+        .right-nav-elements li{
+            display: block;
+        }
+
+        
+    .dropbtn{
+        padding-top: 0em;
+    }
+    .lets-talk-btn{
+        padding: 3%;
+
+    }
+
+        .right-nav-elements li{
+            flex-direction: column;
+            display: grid;
+            grid-auto-flow: column;
+            padding:10% 0em 0% 40%;
+            right:-3vh;
+            position: relative;
+        }
+        .Resume-button{
+            color: black;
+        }
+        
+
+        /* Hamburger */
+        #hamburger{
+            display: block;
+            font-size: 2em;
+            color: #000;
+            padding: 0.5em;
+            width: max-content;
+            border-radius: 1em;
+        }
+
+        #hamburger-button{
+            display: block;
+            position:fixed;
+            background: none;
+            border: none;
+            padding: 0em;
+            margin: 0em;
+            text-align: left;
+        }
+    
+
+
+        #hamburger:hover, #hamburger:active{
+            background-color: rgba(70, 58, 58, 0.164);
+            transition: all 0.5s ease-in-out;
+        }
+        #close-icon:active,#close-icon:hover{
+            background-color: rgba(255, 255, 255, 0.315);
+            transition: all 0.1s ease-in-out;
+        }
+        #close-icon{
+            display: block;
+            font-size: 2em;
+            padding: 0.5em;
+            color: var(--purple);
+            width: max-content;
+            border-radius: 1em;
+        }
+        header img{
+            width:65%;
+            top: 70%; 
+            left: 50%; 
+            
+        }
+        .lets-talk-btn.active {
+            bottom: 10%;
+            right: 4%;
+            transform: translate(50%, 50%);
+            position: fixed;
+            cursor: pointer;
+            border-radius: 10em;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.251);   
+        }
+    
+        .header-content{
+            padding-top: 20%;
+            padding-bottom: 30%;
+        }
+
+        .appear-from-left {
+            position: absolute;
+            left: -100%;
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+        }
+    
+        .appear-from-left.active {
+            left: 0;
+            opacity: 1;
+        }
+
+
+        /* about me */
+        .about-me{
+            padding: 1em;
+            margin: 2em 2em;
+        }
+        
+        div{
+            padding: 1em 2em 3em 2em;
+        }
+        /* skills */
+        .skills-list{
+            display: grid;
+            font-size: 2em;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 70% 70%;
+            margin-top: 2em;
+            margin-bottom: 5em;
+        }
+        .skills-item-1{
+            border-bottom: 1px solid white;
+            border-right: 1px solid white;
+            text-align: center;
+            
+        }
+        .skills-item-4{
+            border-left: 1px solid white;
+            border-right: 0px;
+            text-align: center;
+        }
+        .skills-item-2 {
+            border-bottom: 1px solid white;
+            border-right: 0px;
+            text-align: center;
+        }
+        .skills-item-5{
+            border-right: 1px solid white;
+            text-align: center;
+        }
+        .skills-item-3{
+            border-bottom: 1px solid white;
+            text-align: center;
+        }
+        .skills-item-6{
+            border-top: 1px solid white;
+            text-align: center;
+        }
+        
+        /* education */
+        .education-boxes{
+            display:block;
+            padding: 1%;
+        }
+
+        #MCA, #CS-Hons{
+        margin-top: 0.8em;
+        margin-bottom: 0.8em;   
+        }
+
+        .subname{
+            font-size: 0.9em;
+            padding-top: 0.3em;
+            color: rgb(58, 54, 54);  
+        }
+        .sub-subname{
+            font-size: 0.7em;
+            padding-top: 0.3em;
+            color: rgb(58, 54, 54);  
+        }
+
+        .work-experience-content{
+            display: block;
+        }
+        .work-experience-content img{
+            height: 100%;
+            width: 100%;
+            align-self: center;
+            padding-top: 1em;
+        }
+        #title{
+            padding-top: 1em;
+        }
+
+        .project-contents iframe{
+            margin-top: 3em;
+            width: 100%;
+        }
+
+        .project-contents{
+            display: block;  
+        }
+
+        .footer-logos{
+            display: block;
+            padding-left: 25%;
+        }
+        .Resume-button{
+            box-shadow: 0 0 5px #3aff6b,
+            0 3px 5px #ff53ff;
+        }
+
+
+        
+    }
+    
