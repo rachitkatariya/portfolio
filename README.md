@@ -4,7 +4,7 @@
 This is my personal portfolio website created using HTML, CSS, and JavaScript. It is fully responsive, ensuring a seamless experience on both desktop and mobile devices. The website includes a dark/light mode toggle for user preference. It's a showcase of my skills, resume, and projects, and you can explore it [here](https://ayushichoudhary-19.github.io/myportfolio).
 
 ### 👀 Website Preview
-You can check out the website hosted using GitHub Pages at- https://ayushichoudhary-19.github.io/myportfolio
+You can check out the website hosted using GitHub Pages at- https://rachitkatariya.github.io/portfolio
 
 
 ### 🛠️ Languages and Tools Used
